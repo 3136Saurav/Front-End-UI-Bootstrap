@@ -30,7 +30,8 @@
                     <li class="nav nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <!-- <a data-toggle="modal" data-target="#loginModal">                     -->
+                    <a id="loginButton">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -87,7 +88,8 @@
                     <!-- <a href="#testform" class="btn btn-warning btn-block"
                         data-toggle="tooltip" data-html="true" title="Or Call us at  <br><strong>+852 12345678</strong>" data-placement="bottom">
                         Reserve Table</a> -->
-                    <a data-toggle="modal" data-target="#reserveTable" class="btn btn-warning btn-block">
+                    <!-- <a data-toggle="modal" data-target="#reserveTable" class="btn btn-warning btn-block"> -->
+                    <a class="btn btn-warning btn-block" id="reserveButton">
                         Reserve Table
                     </a>
                 </div>
@@ -345,6 +347,14 @@
                 }
             });
         });
+
+        $("#loginButton").click(function(){
+            $('#loginModal').modal('show')
+        })
+
+        $("#reserveButton").click(function(){
+            $("#reserveTable").modal('show')
+        })
     </script>
 
 </body>
